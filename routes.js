@@ -4,8 +4,14 @@ const routes = [
     {
         method: "GET",
         path: "/",
-        handler: () => {
+        handler: (request, h) => {
+            const response = h.response({
+                status: "fail",
+                message: "Cant be found"
+            })
             console.log("babi");
+            response.code(404)
+            return response;
         },
     },
     {
