@@ -2,6 +2,13 @@ import {addNoteHandler, getNoteByIdHandler, getAllNotesHandler, editNoteByIdHand
 
 const routes = [
     {
+        method: "GET",
+        path: "/",
+        handler: () => {
+            console.log("babi");
+        },
+    },
+    {
         method: "POST",
         path: "/notes",
         handler: addNoteHandler,
